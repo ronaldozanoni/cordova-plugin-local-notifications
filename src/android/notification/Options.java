@@ -251,23 +251,6 @@ public class Options {
     }
 
     /**
-     * @return
-     *      The notification background color for the small icon
-     *      Returns null, if no color is given.
-     */
-    public int getColor() {
-        String hex = options.optString("color", null);
-
-        if (hex == null) {
-            return NotificationCompat.COLOR_DEFAULT;
-        }
-
-        int aRGB = Integer.parseInt(hex, 16);
-
-        return aRGB + 0xFF000000;
-    }
-
-    /**
      * Sound file path for the local notification.
      */
     public Uri getSoundUri() {
